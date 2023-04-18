@@ -1,0 +1,189 @@
+.progress-bar {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #007bff;
+    transition: width .6s ease
+}
+
+.progress {
+	display: -ms-flexbox;
+	display: flex;
+	height: 0.5rem;
+	overflow: hidden;
+	line-height: 0;
+	font-size: .75rem;
+	background-color: #ccc;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	-o-border-radius: 2px;
+	direction: ltr;
+}
+
+.bg-success {
+    background-color: #28a745 !important
+}
+
+.bg-danger {
+    background-color: #dc3545 !important
+}
+
+.bg-warning {
+    background-color: #ff9700 !important;
+    color: #fff !important;
+    border-color: #ff9700 !important;
+}
+
+.bg-primary {
+    background-color: #007bff !important
+}
+
+.bg-info {
+    background-color: #17a2b8 !important
+}
+
+.tooltip-progress {
+	position: absolute;
+	left: calc( 33.33% - 2rem );
+	background-color: #eee;
+	color: #333333;
+	bottom: calc(1rem - -15px);
+	padding: 0.25rem 0.5rem;
+	text-align: center;
+	font-size: 0.75rem;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-o-border-radius: 15px;
+	border: 1px solid #aaa;
+	text-align: center;
+	display: block;
+    z-index: 2;
+}
+
+.tooltip-progress::after {
+	/* content: ""; */
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -12px;
+	border-right: 15px solid transparent;
+	border-left: 15px solid transparent;
+	border-top: 15px solid #666;
+	width: 0px;
+	margin: auto;
+}
+
+.position-relative{
+    position: relative;
+}
+
+.progress-bar-animated {
+    -webkit-animation: 1s linear infinite progress-bar-stripes;
+    animation: 1s linear infinite progress-bar-stripes
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .progress-bar-animated {
+        -webkit-animation: none;
+        animation: none
+    }
+}
+
+.progress-bar-striped {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-size: 1rem 1rem
+}
+
+@-webkit-keyframes progress-bar-stripes {
+    from {
+        background-position: 1rem 0
+    }
+
+    to {
+        background-position: 0 0
+    }
+}
+
+@keyframes progress-bar-stripes {
+    from {
+        background-position: 1rem 0
+    }
+
+    to {
+        background-position: 0 0
+    }
+}
+
+.progress-parent {
+	margin-bottom: 60px;
+	margin-top: 30px;
+}
+
+.tooltip-progress-bottom {
+	left: calc( 33.33% - 2rem );
+	top: -0.65rem;
+	bottom: unset;
+}
+
+.tooltip-progress-bottom::after {
+    bottom: unset;
+	top: -12px;
+	border-bottom: 15px solid #666;
+    border-top: 0;
+}
+
+.tooltip-progress-bottom.t1 {
+	left: calc( 0% );
+}
+
+.tooltip-progress-bottom.t2 {
+    left: calc( 33.33% - 2rem );
+}
+
+.tooltip-progress-bottom.t3 {
+    left: calc( 66.66% - 2rem );
+}
+
+.tooltip-progress-bottom.t4 {
+    left: calc( 100% - 2rem );
+}
+
+.tooltip-progress.sold-items {
+	border: 1px solid #ff9700;
+	color: #fff;
+	border-radius: 2px;
+	padding: 0rem 0.5rem;
+	bottom: -0.35rem;
+    z-index: 3;
+    min-width: 2rem;
+}
+
+.woocommerce-page .price {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+.range-price-progress {
+	position: absolute;
+	left: calc( 0% );
+	bottom: calc(1rem - 3rem);
+	color: #333333;
+	text-align: center;
+	font-size: 0.75rem;
+	text-align: center;
+	display: block;
+	z-index: 1;
+}
