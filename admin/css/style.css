@@ -17,3 +17,51 @@
     background-color: #f8d7da;
     border-color: #f5c6cb
 }
+
+.AMH_NJ-settings {
+    padding: 1rem 2rem;
+    direction: rtl;
+    font-family: IranSans, Vazir, "Tahoma", "sans-serif";
+}
+
+.AMH_NJ-settings input {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    border: none;
+    padding: 0.25rem;
+    background-color: #eee;
+    box-shadow: 3px 3px 18px -3px #aaa;
+    margin: 0.5rem;
+    text-align: center;
+}
+
+.AMH_NJ-settings input.price {
+    width: 8rem;
+    border-radius: 200px;
+}
+
+.AMH_NJ-settings input:focus {
+    box-shadow: inset 3px 3px 18px -3px #aaa;
+}
+
+.AMH_NJ-settings label {
+    font-size: 1.25rem;
+    color: peru;
+}
+
+.AMH_NJ-settings label::after {
+    content: ":";
+}
+
+.AMH_NJ-settings button {
+    cursor: pointer;
+    appearance: none;
+    background-color: blue;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    margin: 1rem;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 3px 3px 18px -3px #ccc;
+}

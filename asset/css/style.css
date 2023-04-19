@@ -1,189 +1,313 @@
-.progress-bar {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-pack: center;
-    justify-content: center;
-    overflow: hidden;
-    color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    background-color: #007bff;
-    transition: width .6s ease
+.table {
+	width: 100%;
+	margin-bottom: 1rem;
+	color: #212529
 }
 
-.progress {
-	display: -ms-flexbox;
-	display: flex;
-	height: 0.5rem;
-	overflow: hidden;
-	line-height: 0;
-	font-size: .75rem;
-	background-color: #ccc;
-	border-radius: 2px;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	-ms-border-radius: 2px;
-	-o-border-radius: 2px;
-	direction: ltr;
+.table td, .table th {
+	padding: .75rem;
+	vertical-align: top;
+	border-top: 1px solid #dee2e6
 }
 
-.bg-success {
-    background-color: #28a745 !important
+.table thead th {
+	vertical-align: bottom;
+	border-bottom: 2px solid #dee2e6
 }
 
-.bg-danger {
-    background-color: #dc3545 !important
+.table tbody+tbody {
+	border-top: 2px solid #dee2e6
 }
 
-.bg-warning {
-    background-color: #ff9700 !important;
-    color: #fff !important;
-    border-color: #ff9700 !important;
+.table-sm td, .table-sm th {
+	padding: .3rem
 }
 
-.bg-primary {
-    background-color: #007bff !important
+.table-bordered {
+	border: 1px solid #dee2e6
 }
 
-.bg-info {
-    background-color: #17a2b8 !important
+.table-bordered td, .table-bordered th {
+	border: 1px solid #dee2e6
 }
 
-.tooltip-progress {
-	position: absolute;
-	left: calc( 33.33% - 2rem );
-	background-color: #eee;
-	color: #333333;
-	bottom: calc(1rem - -15px);
-	padding: 0.25rem 0.5rem;
-	text-align: center;
-	font-size: 0.75rem;
-	border-radius: 15px;
-	-webkit-border-radius: 15px;
-	-moz-border-radius: 15px;
-	-ms-border-radius: 15px;
-	-o-border-radius: 15px;
-	border: 1px solid #aaa;
-	text-align: center;
-	display: block;
-    z-index: 2;
+.table-bordered thead td, .table-bordered thead th {
+	border-bottom-width: 2px
 }
 
-.tooltip-progress::after {
-	/* content: ""; */
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: -12px;
-	border-right: 15px solid transparent;
-	border-left: 15px solid transparent;
-	border-top: 15px solid #666;
-	width: 0px;
-	margin: auto;
+.table-borderless tbody+tbody, .table-borderless td, .table-borderless th, .table-borderless thead th {
+	border: 0
 }
 
-.position-relative{
-    position: relative;
+.table-striped tbody tr:nth-of-type(odd) {
+	background-color: rgba(0, 0, 0, .05)
 }
 
-.progress-bar-animated {
-    -webkit-animation: 1s linear infinite progress-bar-stripes;
-    animation: 1s linear infinite progress-bar-stripes
+.table-hover tbody tr:hover {
+	color: #212529;
+	background-color: rgba(0, 0, 0, .075)
 }
 
-@media (prefers-reduced-motion:reduce) {
-    .progress-bar-animated {
-        -webkit-animation: none;
-        animation: none
-    }
+.table-primary, .table-primary>td, .table-primary>th {
+	background-color: #b8daff
 }
 
-.progress-bar-striped {
-    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
-    background-size: 1rem 1rem
+.table-primary tbody+tbody, .table-primary td, .table-primary th, .table-primary thead th {
+	border-color: #7abaff
 }
 
-@-webkit-keyframes progress-bar-stripes {
-    from {
-        background-position: 1rem 0
-    }
-
-    to {
-        background-position: 0 0
-    }
+.table-hover .table-primary:hover {
+	background-color: #9fcdff
 }
 
-@keyframes progress-bar-stripes {
-    from {
-        background-position: 1rem 0
-    }
-
-    to {
-        background-position: 0 0
-    }
+.table-hover .table-primary:hover>td, .table-hover .table-primary:hover>th {
+	background-color: #9fcdff
 }
 
-.progress-parent {
-	margin-bottom: 60px;
-	margin-top: 30px;
+.table-secondary, .table-secondary>td, .table-secondary>th {
+	background-color: #d6d8db
 }
 
-.tooltip-progress-bottom {
-	left: calc( 33.33% - 2rem );
-	top: -0.65rem;
-	bottom: unset;
+.table-secondary tbody+tbody, .table-secondary td, .table-secondary th, .table-secondary thead th {
+	border-color: #b3b7bb
 }
 
-.tooltip-progress-bottom::after {
-    bottom: unset;
-	top: -12px;
-	border-bottom: 15px solid #666;
-    border-top: 0;
+.table-hover .table-secondary:hover {
+	background-color: #c8cbcf
 }
 
-.tooltip-progress-bottom.t1 {
-	left: calc( 0% );
+.table-hover .table-secondary:hover>td, .table-hover .table-secondary:hover>th {
+	background-color: #c8cbcf
 }
 
-.tooltip-progress-bottom.t2 {
-    left: calc( 33.33% - 2rem );
+.table-success, .table-success>td, .table-success>th {
+	background-color: #c3e6cb
 }
 
-.tooltip-progress-bottom.t3 {
-    left: calc( 66.66% - 2rem );
+.table-success tbody+tbody, .table-success td, .table-success th, .table-success thead th {
+	border-color: #8fd19e
 }
 
-.tooltip-progress-bottom.t4 {
-    left: calc( 100% - 2rem );
+.table-hover .table-success:hover {
+	background-color: #b1dfbb
 }
 
-.tooltip-progress.sold-items {
-	border: 1px solid #ff9700;
+.table-hover .table-success:hover>td, .table-hover .table-success:hover>th {
+	background-color: #b1dfbb
+}
+
+.table-info, .table-info>td, .table-info>th {
+	background-color: #bee5eb
+}
+
+.table-info tbody+tbody, .table-info td, .table-info th, .table-info thead th {
+	border-color: #86cfda
+}
+
+.table-hover .table-info:hover {
+	background-color: #abdde5
+}
+
+.table-hover .table-info:hover>td, .table-hover .table-info:hover>th {
+	background-color: #abdde5
+}
+
+.table-warning, .table-warning>td, .table-warning>th {
+	background-color: #ffeeba
+}
+
+.table-warning tbody+tbody, .table-warning td, .table-warning th, .table-warning thead th {
+	border-color: #ffdf7e
+}
+
+.table-hover .table-warning:hover {
+	background-color: #ffe8a1
+}
+
+.table-hover .table-warning:hover>td, .table-hover .table-warning:hover>th {
+	background-color: #ffe8a1
+}
+
+.table-danger, .table-danger>td, .table-danger>th {
+	background-color: #f5c6cb
+}
+
+.table-danger tbody+tbody, .table-danger td, .table-danger th, .table-danger thead th {
+	border-color: #ed969e
+}
+
+.table-hover .table-danger:hover {
+	background-color: #f1b0b7
+}
+
+.table-hover .table-danger:hover>td, .table-hover .table-danger:hover>th {
+	background-color: #f1b0b7
+}
+
+.table-light, .table-light>td, .table-light>th {
+	background-color: #fdfdfe
+}
+
+.table-light tbody+tbody, .table-light td, .table-light th, .table-light thead th {
+	border-color: #fbfcfc
+}
+
+.table-hover .table-light:hover {
+	background-color: #ececf6
+}
+
+.table-hover .table-light:hover>td, .table-hover .table-light:hover>th {
+	background-color: #ececf6
+}
+
+.table-dark, .table-dark>td, .table-dark>th {
+	background-color: #c6c8ca
+}
+
+.table-dark tbody+tbody, .table-dark td, .table-dark th, .table-dark thead th {
+	border-color: #95999c
+}
+
+.table-hover .table-dark:hover {
+	background-color: #b9bbbe
+}
+
+.table-hover .table-dark:hover>td, .table-hover .table-dark:hover>th {
+	background-color: #b9bbbe
+}
+
+.table-active, .table-active>td, .table-active>th {
+	background-color: rgba(0, 0, 0, .075)
+}
+
+.table-hover .table-active:hover {
+	background-color: rgba(0, 0, 0, .075)
+}
+
+.table-hover .table-active:hover>td, .table-hover .table-active:hover>th {
+	background-color: rgba(0, 0, 0, .075)
+}
+
+.table .thead-dark th {
 	color: #fff;
-	border-radius: 2px;
-	padding: 0rem 0.5rem;
-	bottom: -0.35rem;
-    z-index: 3;
-    min-width: 2rem;
+	background-color: #343a40;
+	border-color: #454d55
 }
 
-.woocommerce-page .price {
-	display: flex;
-	flex-direction: row-reverse;
-	justify-content: flex-end;
-	align-items: flex-end;
+.table .thead-light th {
+	color: #495057;
+	background-color: #e9ecef;
+	border-color: #dee2e6
 }
 
-.range-price-progress {
-	position: absolute;
-	left: calc( 0% );
-	bottom: calc(1rem - 3rem);
-	color: #333333;
-	text-align: center;
-	font-size: 0.75rem;
-	text-align: center;
+.table-dark {
+	color: #fff;
+	background-color: #343a40
+}
+
+.table-dark td, .table-dark th, .table-dark thead th {
+	border-color: #454d55
+}
+
+.table-dark.table-bordered {
+	border: 0
+}
+
+.table-dark.table-striped tbody tr:nth-of-type(odd) {
+	background-color: rgba(255, 255, 255, .05)
+}
+
+.table-dark.table-hover tbody tr:hover {
+	color: #fff;
+	background-color: rgba(255, 255, 255, .075)
+}
+
+@media (max-width:575.98px) {
+	.table-responsive-sm {
+			display: block;
+			width: 100%;
+			overflow-x: auto;
+			-webkit-overflow-scrolling: touch
+	}
+
+	.table-responsive-sm>.table-bordered {
+			border: 0
+	}
+}
+
+@media (max-width:767.98px) {
+	.table-responsive-md {
+			display: block;
+			width: 100%;
+			overflow-x: auto;
+			-webkit-overflow-scrolling: touch
+	}
+
+	.table-responsive-md>.table-bordered {
+			border: 0
+	}
+}
+
+@media (max-width:991.98px) {
+	.table-responsive-lg {
+			display: block;
+			width: 100%;
+			overflow-x: auto;
+			-webkit-overflow-scrolling: touch
+	}
+
+	.table-responsive-lg>.table-bordered {
+			border: 0
+	}
+}
+
+@media (max-width:1199.98px) {
+	.table-responsive-xl {
+			display: block;
+			width: 100%;
+			overflow-x: auto;
+			-webkit-overflow-scrolling: touch
+	}
+
+	.table-responsive-xl>.table-bordered {
+			border: 0
+	}
+}
+
+.table-responsive {
 	display: block;
-	z-index: 1;
+	width: 100%;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch
+}
+
+.table-responsive>.table-bordered {
+	border: 0
+}
+
+@media print {
+	.table {
+		border-collapse: collapse !important
+	}
+
+	.table td, .table th {
+			background-color: #fff !important
+	}
+
+	.table-bordered td, .table-bordered th {
+			border: 1px solid #dee2e6 !important
+	}
+
+	.table-dark {
+			color: inherit
+	}
+
+	.table-dark tbody+tbody, .table-dark td, .table-dark th, .table-dark thead th {
+			border-color: #dee2e6
+	}
+
+	.table .thead-dark th {
+			color: inherit;
+			border-color: #dee2e6
+	}
 }
