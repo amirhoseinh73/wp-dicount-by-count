@@ -3,13 +3,17 @@
 /**
  *
  * Plugin Name: wc discount by count
- * Plugin URI:  https://instagram.com/amirhoseinh73
+ * Plugin URI:  https://github.com/amirhoseinh73/wp-dicount-by-count
  * Description: ایجاد تخفیف بر اساس تعداد خریداری شده از یک محصول مشخص
- * Version:     1.0
+ * Version:     1.1.2
  * Author:      Amirhosein
- * Author URI:  http://instagram.com/amirhoseinh73
+ * Author URI:  https://github.com/amirhoseinh73
  * License:     
  * License URI:
+ * WC requires at least: 5.5
+ * WC tested up to: 6.8
+ * Requires at least: 5.8
+ * Requires PHP: 7.2
  */
 
 define("AMH_NJ_DBC_PLUGIN_NAME", "discountByCount");

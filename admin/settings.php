@@ -1,12 +1,12 @@
 <?php
 
-function progress_global_settings()
+function AMH_NJ_progress_global_settings()
 {
-    title();
-    ranges();
+    AMH_NJ_title();
+    AMH_NJ_ranges();
 }
 
-function title()
+function AMH_NJ_title()
 {
 ?>
     <section class="<?= AMH_NJ_DBC_PREFIX ?>-settings">
@@ -26,7 +26,7 @@ function title()
     <?php
 }
 
-function ranges()
+function AMH_NJ_ranges()
 {
     global $wpdb;
 
@@ -35,7 +35,7 @@ function ranges()
 
     $resultQuery = $wpdb->get_results("SELECT * FROM $tableName WHERE option_name='$optionName'");
 
-    if (exists($resultQuery)) {
+    if (AMH_NJ_exists($resultQuery)) {
         $resultQuery = $resultQuery[0];
         $result = json_decode($resultQuery->option_value, true);
     }
@@ -44,15 +44,15 @@ function ranges()
     ?>
         <form method="POST">
             <label>شناسه محصول مورد نظر</label>
-            <input type="text" id="product_id" value="<?php if (exists($result)) echo $result["product_id"] ?>" name="product_id" />
+            <input type="text" id="product_id" value="<?php if (AMH_NJ_exists($result)) echo $result["product_id"] ?>" name="product_id" />
 
             <?php for ($i = 1; $i <= 4; $i++) : ?>
                 <hr />
                 <label>تعداد فروش</label>
-                <input type="text" id="range_<?= $i ?>" value="<?php if (exists($result)) echo $result["range_$i"] ?>" name="range_<?= $i ?>" />
+                <input type="text" id="range_<?= $i ?>" value="<?php if (AMH_NJ_exists($result)) echo $result["range_$i"] ?>" name="range_<?= $i ?>" />
 
                 <label>قیمت فروش</label>
-                <input type="text" class="price" id="price_<?= $i ?>" value="<?php if (exists($result)) echo $result["price_$i"] ?>" name="price_<?= $i ?>" />
+                <input type="text" class="price" id="price_<?= $i ?>" value="<?php if (AMH_NJ_exists($result)) echo $result["price_$i"] ?>" name="price_<?= $i ?>" />
             <?php endfor; ?>
 
             <hr />
@@ -73,7 +73,7 @@ function ranges()
         "option_value" => json_encode($optionValue),
     ];
 
-    if (!exists($resultQuery)) {
+    if (!AMH_NJ_exists($resultQuery)) {
         //insert
         try {
             $wpdb->insert($tableName, $dataToInsertOrUpdate);
